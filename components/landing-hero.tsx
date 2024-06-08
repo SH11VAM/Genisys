@@ -6,29 +6,14 @@ import { useAuth } from "@clerk/nextjs";
 
 import { Button } from "@/components/ui/button";
 
-import { motion } from "framer-motion";
-import { LampContainer } from "./ui/lamp";
-
-
 export const LandingHero = () => {
   const { isSignedIn } = useAuth();
 
   return (
     <div className="text-white font-bold py-36 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
-        <LampContainer>
-        <motion.h1 
-         initial={{ opacity: 0.5, y: 100 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         transition={{
-           delay: 0.3,
-           duration: 0.8,
-           ease: "easeInOut",
-         }}
-         className=" text-sky-200"
-         >Unlock Infinite Creativity With <br /> Our Generative AI <br /> Genisys
-         </motion.h1>
-         </LampContainer>
+        Unlock Infinite Creativity With <br /> Our Generative AI <br /> Genisys
+    
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-sky-300 to-blue-700 p-2">
           <TypewriterComponent
             options={{
