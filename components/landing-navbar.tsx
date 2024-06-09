@@ -34,7 +34,7 @@ return(
          </Link>
          <div className="flex items-center gap-x-2">
             <Link href= {isSignedIn ? "/dashboard" : "/sign-up"}>
-                <Button  className="rounded-full bg-gradient-to-r from-sky-400 to-blue-500 hover:from-pink-500 text-white hover:to-yellow-500 hover:text-slate-800 font-black">
+                <Button  className="rounded-full bg-gradient-to-r from-zinc-400 to-zinc-500 hover:from-pink-500 text-white hover:to-yellow-500 hover:text-slate-800 font-black text-lg">
                     Get Started
                 </Button>
             </Link>

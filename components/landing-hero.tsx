@@ -421,7 +421,7 @@ export const LandingHero = () => {
           
         </div>
 
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-sky-300 to-blue-700 p-2">
+        <div className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-zinc-300 to-slate-500 p-2">
           <TypewriterComponent
             options={{
               strings: [
@@ -443,13 +443,13 @@ export const LandingHero = () => {
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button
             variant="secondary"
-            className="md:text-lg p-4 md:p-6 rounded-full font-semibold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-pink-500 text-white hover:to-yellow-500 hover:text-slate-800 hover:font-extrabold"
+            className="md:text-lg p-4 md:p-6 rounded-full text-4xl font-semibold bg-gradient-to-r from-zinc-400 to-zinc-500 hover:from-pink-500  hover:to-yellow-500 hover:text-slate-800 hover:font-extrabold"
           >
             Start Generating For Free
           </Button>
         </Link>
       </div>
-      <div className="text-zinc-400 text-xs md:text-sm font-bold ">
+      <div className="text-zinc-400 text-lg md:text-sm font-bold ">
         No credit card required.
       </div>
     </div>
