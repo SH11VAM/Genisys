@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Heading } from "@/components/heading";
 import { Download, ImageIcon } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { amountOptions, formSchema, resolutionOptions  } from "./constants";
+import { amountOptions, formSchema, resolutionOptions } from "./constants";
 import {
   Controller,
   ControllerProps,
@@ -89,7 +89,7 @@ const Imagepage = () => {
                         className="border-0 outline-none focus-visible:ring-0 
                         focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="Message Genisys"
+                        placeholder="Message Genesys"
                         {...field}
                       />
                     </FormControl>
@@ -123,7 +123,7 @@ const Imagepage = () => {
                   </FormItem>
                 )}
               />
-               <FormField
+              <FormField
                 name="resolution"
                 control={form.control}
                 render={({ field }) => (
@@ -172,36 +172,23 @@ const Imagepage = () => {
           )}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {
-              images.map((src)=>(
-                <Card key={src} className="rounded-lg overflow-hidden">
-                  <div className="relative aspect-square">
-                    <Image
-                   alt="Image"
-                   src={src}
-                    fill
-                    
-                    />
-                  </div>
-                  <CardFooter className="p-2">
-                    <Button
-                     variant="secondary" 
-                     className="w-full" 
-                     onClick={()=>window.open(src)}
-                     >
-                      <Download className="h-4 w-4 mr-2"/>
-                      Download
-
-                    </Button>
-                    
-                  </CardFooter>
-
-                </Card>
-
-              ))
-              
-              
-            }
+            {images.map((src) => (
+              <Card key={src} className="rounded-lg overflow-hidden">
+                <div className="relative aspect-square">
+                  <Image alt="Image" src={src} fill />
+                </div>
+                <CardFooter className="p-2">
+                  <Button
+                    variant="secondary"
+                    className="w-full"
+                    onClick={() => window.open(src)}
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Download
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
