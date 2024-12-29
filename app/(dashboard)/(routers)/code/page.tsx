@@ -54,7 +54,6 @@ const CodePage = () => {
 
       form.reset();
     } catch (error: any) {
-      //TODO: Open Pro Model
       console.log(error);
     } finally {
       router.refresh();
