@@ -22,7 +22,7 @@ const MobileSidebar = () => {
     }, []);
 
     if(!isMounted){
-        return null;
+        return <div>{null}</div>;
     }
 
 

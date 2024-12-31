@@ -3,15 +3,11 @@
 import {
   MessageSquare,
   ArrowRight,
-  Music,
   Image,
-  VideoIcon,
   Code,
 } from "lucide-react";
-import { UserButton } from "@clerk/nextjs";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { MutableRequestCookiesAdapter } from "@/node_modules/next/dist/server/web/spec-extension/adapters/request-cookies";
 import { useRouter } from "@/node_modules/next/navigation";
 
 const tools = [
