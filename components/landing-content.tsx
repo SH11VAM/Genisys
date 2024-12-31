@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Playfair} from "next/font/google";
 
 const testimonials = [
   {
@@ -32,18 +33,25 @@ const testimonials = [
       "Efficiency at its best! This coding tool streamlines the development process, allowing me to focus on writing clean and efficient code.",
   },
 ];
+const paragraph = Playfair({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const LandingContent = () => {
+
+ 
+
   return (
     <div className="px-10 pb-20">
-      <h2 className="text-center text-4xl text-white font-extrabold mb-10">
+      <h2 className={`text-center text-4xl text-white font-extrabold mb-10 ${paragraph.className}`}>
         Testimonials
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {testimonials.map((item) => (
           <Card
             key={item.description}
-            className="bg-[#030304] border-none text-white shadow-lg shadow-gray-600"
+            className={`bg-[#030304] border-none text-white shadow-xl shadow-gray-600 ${paragraph.className}`}
           >
             <CardHeader>
               <CardTitle className="flex items-center gap-x-2">

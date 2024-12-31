@@ -1,6 +1,6 @@
 "use client";
 
-import { Montserrat } from "next/font/google";
+import { Playfair } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 
-const font = Montserrat({
+const font = Playfair({
     weight:"600",
     subsets: ['latin', 'latin-ext']
 });
@@ -30,12 +30,12 @@ return(
 
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
-            Genesys
+            Genisys
         </h1>
          </Link>
          <div className="flex items-center gap-x-2">
             <Link href= {isSignedIn ? "/dashboard" : "/sign-up"}>
-                <Button  className="rounded-full bg-gradient-to-r from-zinc-400 to-zinc-500 hover:from-pink-500 text-white hover:to-yellow-500 hover:text-slate-800 font-black text-lg">
+                <Button  className={`${font.className} rounded-full bg-gradient-to-r from-zinc-400 to-zinc-900  text-white  hover:from-[#C53678] hover:via-[#F79C1A] hover:to-[#742186] hover:text-black font-black text-lg`}>
                     Get Started
                 </Button>
             </Link>
