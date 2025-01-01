@@ -8,19 +8,13 @@ import { Code, MessageSquare } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "./constants";
 import {
-  Controller,
-  ControllerProps,
-  FieldPath,
-  FieldValues,
-  FormProvider,
-  useFormContext,
   useForm,
 } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
+import { ChatCompletionUserMessageParam } from "openai/resources/index.mjs";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
@@ -30,7 +24,7 @@ import ReactMarkdown from "react-markdown";
 
 const CodePage = () => {
   const router = useRouter();
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+  const [messages, setMessages] = useState<ChatCompletionUserMessageParam []>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,9 +37,10 @@ const CodePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const userMessage: ChatCompletionRequestMessage = {
+      const userMessage: ChatCompletionUserMessageParam = {
         role: "user",
-        content: values.prompt,
+        content: values.prompt || "",
+        name: "User",
       };
       const newMessage = [...messages, userMessage];
 
@@ -114,9 +109,9 @@ const CodePage = () => {
           )}
 
           <div className="flex flex-col-reverse gap-y-4">
-            {messages.map((message) => (
+            {messages.map((message, index) => (
               <div
-                key={message.content}
+                key={index}
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg",
                   message.role === "user"
@@ -139,7 +134,7 @@ const CodePage = () => {
                   }}
                   className="test-sm overflow-hidden leading-7"
                 >
-                  {message.content || ""}
+                  {Array.isArray(message.content) ? message.content.join('') : message.content || ""}
                 </ReactMarkdown>
               </div>
             ))}
