@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai"; // Change this line
 import { auth } from "@clerk/nextjs";
-import { ChatCompletionRequestMessage } from "openai";
+
 
 const openAI = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 }); 
 
-const instructionMessage: ChatCompletionRequestMessage = {
-    role :"system",
-    content: "Yo are a code generator . You must answer only in markdown code snippets.Use code comments for explanations"
+const instructionMessage = {
+    role:"system",
+    content: "Yo are a code generator You must answer only in markdown code snippets.Use code comments for explanations"
 }
 
 export async function POST(req:Request) {

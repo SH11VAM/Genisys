@@ -22,7 +22,6 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
-import { cn } from "@/lib/utils";
 import { Select } from "@/components/ui/select";
 import {
   SelectContent,
@@ -175,7 +174,7 @@ const Imagepage = () => {
             {images.map((src) => (
               <Card key={src} className="rounded-lg overflow-hidden">
                 <div className="relative aspect-square">
-                  <Image alt="Image" src={src} fill sizes="" />
+                  <Image alt="Image" src={src} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <CardFooter className="p-2">
                   <Button
