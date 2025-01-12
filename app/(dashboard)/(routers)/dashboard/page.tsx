@@ -36,12 +36,12 @@ const tools = [
 const DashboardPage = () => {
   const router = useRouter();
   return (
-    <div>
+    <div >
       <div className="mb-8 space-y-4 ">
-        <h2 className="text-2xl md:text-4xl font-bold text-center">
+        <h2 className="text-2xl md:text-4xl font-bold text-center font-lota">
           Explore the power of AI
         </h2>
-        <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
+        <p className="text-muted-foreground font-light text-sm md:text-lg text-center font-lota">
           Chat with smartest AI- Experience the power of AI
         </p>
       </div>
@@ -52,7 +52,7 @@ const DashboardPage = () => {
             key={tool.href}
             className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
           >
-            <div className="flex items-center gap-x-4">
+            <div className="flex items-center gap-x-4 font-lota">
               <div className={cn(" p-2 w-fit rounded-md", tool.bgColor)}>
                 <tool.icon className={cn("w-8 h-8", tool.color)} />
               </div>

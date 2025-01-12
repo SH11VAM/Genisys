@@ -2,7 +2,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-
 const testimonials = [
   {
     name: "Anurag",
@@ -34,14 +33,12 @@ const testimonials = [
   },
 ];
 
-
 export const LandingContent = () => {
-
- 
-
   return (
     <div className="px-10 pb-20">
-      <h2 className={`text-center text-4xl text-black font-extrabold mb-10 font-lota border rounded-lg py-2 bg-[#808080]`}>
+      <h2
+        className={`text-center text-4xl text-black font-extrabold mb-10 font-lota border rounded-lg py-2 bg-[#808080]`}
+      >
         Testimonials
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

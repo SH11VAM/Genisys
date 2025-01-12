@@ -11,7 +11,6 @@ export const LandingHero = () => {
   return (
     <div className="text-white font-bold py-36 text-center space-y-5 grid place-items-center">
       <div className="mb-5">
-        
         <p
           className={` text-4xl sm:text-7xl font-extrabold font-lota relative z-20 bg-clip-text text-[#FEFEFF] py-8`}
         >

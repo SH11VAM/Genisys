@@ -2,11 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Sidebar from "@/components/sidebar";
 import { useEffect, useState } from "react";
 
@@ -34,7 +30,6 @@ const MobileSidebar = () => {
       </SheetContent>
     </Sheet>
   );
-  
 };
 
 export default MobileSidebar;
