@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  MessageSquare,
-  ArrowRight,
-  Image,
-  Code,
-} from "lucide-react";
+import { MessageSquare, ArrowRight, Image, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { useRouter } from "@/node_modules/next/navigation";
@@ -36,7 +31,7 @@ const tools = [
 const DashboardPage = () => {
   const router = useRouter();
   return (
-    <div >
+    <div>
       <div className="mb-8 space-y-4 ">
         <h2 className="text-2xl md:text-4xl font-bold text-center font-lota">
           Explore the power of AI
