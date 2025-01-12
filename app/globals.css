@@ -39,6 +39,16 @@ html,body,
  
     --radius: 0.5rem;
   }
+
+  @font-face {
+    font-family: 'Lota Grotesque';
+    src: url('/font/lota-grotesque-alt-1-webfont/Los\ Andes\ \ Lota\ Grotesque\ Alt\ 1\ Regular.woff') format('woff'),
+         url('/font/lota-grotesque-alt-1-webfont/Los\ Andes\ \ Lota\ Grotesque\ Alt\ 2\ Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  
  
   .dark {
     --background: 222.2 84% 4.9%;
