@@ -37,7 +37,7 @@ export const LandingHero = () => {
             ],
             autoStart: true,
             loop: true,
-            wrapperClassName: ` tracking-wide text-[80px] md:text-[40]`,
+            wrapperClassName: ` tracking-wide text-[80px] md:text-[40] sm:text-[30px] font-extrabold font-lota`,
           }}
         />
       </div>
